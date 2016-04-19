@@ -10,24 +10,25 @@ public class Solution {
         Scanner in = new Scanner(System.in);
         String time = in.next();
         
-        
-	public class Solution {
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String time = in.next();
-        
-     if ((time.substring(8,10)).equals("PM") ) {
+    if ((time.substring(8,10)).equals("PM") ) {
 	 String secondString = time.substring(2,8);
 	 
 	 String firstString = time.substring(0,2);
 	 int convertedStringtoInt = Integer.parseInt(firstString);
+	 if(convertedStringtoInt == 12){
+		 
+		 System.out.println(firstString+secondString);
+	 }
+	 else{
 	 int twelve = 12;
 	 
 	 int twentyFourFormat = convertedStringtoInt + twelve;
 	 String sTwentyFourFormat = Integer.toString(twentyFourFormat);
 	 
 	 System.out.println(sTwentyFourFormat +  secondString);
+		 
+	 }
+	 
 	 }
  
 
@@ -47,10 +48,5 @@ public class Solution {
 	 
 	    
 	}
-	
-    }
-}
-
-        
     }
 }
