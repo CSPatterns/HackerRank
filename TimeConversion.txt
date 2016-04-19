@@ -11,7 +11,13 @@ public class Solution {
         String time = in.next();
         
         
-	if ( time.substring(8,10).equals("PM")  ){
+	public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String time = in.next();
+        
+     if ((time.substring(8,10)).equals("PM") ) {
 	 String secondString = time.substring(2,8);
 	 
 	 String firstString = time.substring(0,2);
@@ -25,13 +31,26 @@ public class Solution {
 	 }
  
 
-	else{
-
-	System.out.println(time.substring(2,8));
-
-	//|  time.substring(8,10).equals("AM")
-	//leave it as it is but remove the AM at the end of the string
+ 
+    if((time.substring(8,10)).equals("AM")){
+	     String doubleZero = "";
+		 String secondString = time.substring(2,8);
+		 String firstString = time.substring(0,2);
+		 int convertedStringtoInt = Integer.parseInt(firstString);
+		 
+		 if( convertedStringtoInt == 12){
+                 doubleZero = "00" ;
+				 System.out.println(doubleZero + secondString );
+		 }else{
+		  System.out.println(time.substring(2,8));
+		 }
+	 
+	    
 	}
+	
+    }
+}
+
         
     }
 }
