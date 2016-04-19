@@ -38,15 +38,18 @@ public class Solution {
 		 String secondString = time.substring(2,8);
 		 String firstString = time.substring(0,2);
 		 int convertedStringtoInt = Integer.parseInt(firstString);
+        
+         if(convertedStringtoInt<12){
+		  System.out.println(time.substring(2,8));
+		 }
 		 
 		 if( convertedStringtoInt == 12){
                  doubleZero = "00" ;
 				 System.out.println(doubleZero + secondString );
-		 }else{
-		  System.out.println(time.substring(2,8));
 		 }
-	 
-	    
+        
+     
+	     
 	}
     }
 }
