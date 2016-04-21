@@ -26,8 +26,10 @@ public class Solution {
                 
                  if(a[a_i] >= 0){
                     noOfStudentsNotOnTime++;
-                }
-                     
+                }            
+                
+            }
+
                 if(noOfStudentsOnTime >= k){
                     System.out.println("NO");
                 }
@@ -35,8 +37,6 @@ public class Solution {
                 if(noOfStudentsNotOnTime < k){
                     System.out.println("YES");
                 }
-                
-            }
             
            
         }
