@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for(int a0 = 0; a0 < t; a0++){
+            int n = in.nextInt();  //number of students
+            int k = in.nextInt();  //number of students that must attend so that class is not cancel
+            int a[] = new int[n];  //array where you store students
+            int noOfStudentsOnTime = 0;
+            int noOfStudentsNotOnTime = 0;
+            
+            for(int a_i=0; a_i < n; a_i++){
+                a[a_i] = in.nextInt();
+                
+                if(a[a_i] <= 0){
+                    noOfStudentsOnTime++;
+                }
+           
+                
+                 if(a[a_i] >= 0){
+                    noOfStudentsNotOnTime++;
+                }
+                     
+                if(noOfStudentsOnTime >= k){
+                    System.out.println("NO");
+                }
+                
+                if(noOfStudentsNotOnTime < k){
+                    System.out.println("YES");
+                }
+                
+            }
+            
+           
+        }
+    }
+}
