@@ -22,23 +22,28 @@ public class Solution {
                 if(a[a_i] <= 0){
                     noOfStudentsOnTime++;
                 }
-           
-                
-                 if(a[a_i] >= 0){
+          
+                if(a[a_i] > 0){
                     noOfStudentsNotOnTime++;
-                }            
-                
+                }
             }
-
-                if(noOfStudentsOnTime >= k){
-                    System.out.println("NO");
+            
+              if(noOfStudentsNotOnTime < k){
+                    System.out.println("YES");
+                      noOfStudentsOnTime = 0;
+					  noOfStudentsNotOnTime = 0;
+           
+              }
+               if(noOfStudentsOnTime >= k){
+                System.out.println("NO");
+                      noOfStudentsOnTime = 0;
+					  noOfStudentsNotOnTime = 0;
                 }
                 
-                if(noOfStudentsNotOnTime < k){
-                    System.out.println("YES");
-                }
             
-           
+            
+
         }
+ 
     }
 }
