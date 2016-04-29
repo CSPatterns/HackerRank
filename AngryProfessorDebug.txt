@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+
+
+		int arrtwoD[][] = {
+
+		{ -93, -86, 49, -62, -90, -63, 40, 72, 11, 67 },
+
+		{ 23, -35, -2, 58, -67, -56, -42, -73, -19, 37 },
+
+		{ 13, 91, 56, -62, 96, -5, -84, -36, -46, -13 },
+
+		{ 45, 67, 64, -50, -8, 78, 84, -51, 99, 60 },
+
+		{ 26, 94, -95, 34, 67, -97, 17, 52, 1, 86 },
+
+		{ 19, 29, -17, -71, -75, -27, -56, -53, 65, 83 },
+
+		{ -32, -3, -70, 8, -40, -96, -18, -46, -21, -79 },
+
+		{ -50, 0, 64, 14, -56, -91, -65, -36, 51, -28 },
+
+		{ -58, -29, -35, -18, 43, -28, -76, 43, -13, 6 },
+
+		{ 88, -17, -96, 43, 83, 99, 25, 90, -39, 86 }
+
+		};
+
+		
+		for (int a0 = 0; a0 < arrtwoD.length; a0++) {
+		
+			Scanner user_input = new Scanner(System.in);
+			System.out.println("type a number: ");
+			
+			int k = 0; // number of students that must attend so that // class is not cancel
+			
+			k = user_input.nextInt();
+			
+			int noOfStudentsOnTime = 0;
+			int noOfStudentsNotOnTime = 0;
+
+			for (int a_i = 0; a_i < arrtwoD[a0].length; a_i++) {
+	
+	
+				if (arrtwoD[a0][a_i] <= 0) {
+					noOfStudentsOnTime++;
+				}
+
+				if (arrtwoD[a0][a_i] > 0) {
+					noOfStudentsNotOnTime++;
+				}
+			}
+			
+			System.out.println("not on time:" + noOfStudentsNotOnTime);
+			System.out.println("on time:" + noOfStudentsOnTime);
+
+			if (noOfStudentsNotOnTime < k) {
+				System.out.println("YES");
+				noOfStudentsOnTime = 0;
+				noOfStudentsNotOnTime = 0;
+
+			}
+			if (noOfStudentsOnTime >= k) {
+				System.out.println("NO");
+				noOfStudentsOnTime = 0;
+				noOfStudentsNotOnTime = 0;
+			}
+
+		}
+
+	}
+}
