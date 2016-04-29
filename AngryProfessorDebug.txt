@@ -50,22 +50,22 @@ public class Solution {
 					noOfStudentsOnTime++;
 				}
 
-				if (arrtwoD[a0][a_i] > 0) {
-					noOfStudentsNotOnTime++;
-				}
+//				if (arrtwoD[a0][a_i] > 0) {
+//					noOfStudentsNotOnTime++;
+//				}
 			}
 			
 			System.out.println("not on time:" + noOfStudentsNotOnTime);
 			System.out.println("on time:" + noOfStudentsOnTime);
 
-			if (noOfStudentsNotOnTime < k) {
-				System.out.println("YES");
+			if (noOfStudentsOnTime >= k) {
+				System.out.println("NO");
 				noOfStudentsOnTime = 0;
 				noOfStudentsNotOnTime = 0;
 
 			}
-			if (noOfStudentsOnTime >= k) {
-				System.out.println("NO");
+			else  {
+				System.out.println("YES");
 				noOfStudentsOnTime = 0;
 				noOfStudentsNotOnTime = 0;
 			}
