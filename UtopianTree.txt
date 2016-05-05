@@ -12,24 +12,27 @@ public class Solution {
         int initialHeight = 1;
         for(int a0 = 0; a0 < t; a0++){
             int n = in.nextInt();
+            
             if (n == 0){
                 
                 System.out.println(initialHeight);
                 continue;
             }
             
+           initialHeight = initialHeight + initialHeight;
+            
             if (n % 2 == 0){
-                initialHeight = initialHeight + 1;
+                initialHeight = initialHeight + 1 ;
             }
-            else{
+          
                 
-              initialHeight = initialHeight + initialHeight;  
-            }
             
             System.out.println(initialHeight);
             
-            initialHeight = 1;
+           
       
         }
+        
+         initialHeight = 1;
     }
 }
