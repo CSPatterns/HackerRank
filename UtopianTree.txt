@@ -13,6 +13,9 @@ public class Solution {
         
         int initialHeight = 1;
         for(int a0 = 0; a0 < t; a0++){
+            
+            Scanner user_input = new Scanner(System.in);	
+		
             int n = in.nextInt();
             
             if(n ==0){
@@ -37,9 +40,10 @@ public class Solution {
           
                 
             
-            System.out.println(initialHeight);
+            
              
           }
+           System.out.println(initialHeight);
             
           initialHeight = 1;
            
