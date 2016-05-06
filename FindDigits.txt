@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        int countNbrDivisibleByN = 0; 
+        
+        for(int a0 = 0; a0 < t; a0++){
+            int n = in.nextInt();
+            String nCovertedtoString = Integer.toString(n);
+            for (int i = 0; i<nCovertedtoString.length(); i++){
+               // int tmp = 0;
+                char tmp = nCovertedtoString.charAt(i);
+                
+                //nCovertedtoString[i] = tmp;
+                if(n / tmp == 0){
+                    countNbrDivisibleByN++;
+                }
+                
+       
+            }
+                  System.out.println(countNbrDivisibleByN);
+                
+                countNbrDivisibleByN = 0; 
+        }
+    }
+}
