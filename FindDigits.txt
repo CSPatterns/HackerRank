@@ -14,12 +14,21 @@ public class Solution {
         for(int a0 = 0; a0 < t; a0++){
             int n = in.nextInt();
             String nCovertedtoString = Integer.toString(n);
+            
+            Label2:
             for (int i = 0; i<nCovertedtoString.length(); i++){
                // int tmp = 0;
                 char tmp = nCovertedtoString.charAt(i);
                 
+                int b =  Character.getNumericValue(tmp);
+                
+                if(b ==0){
+                    
+                    continue Label2;
+                }
+                
                 //nCovertedtoString[i] = tmp;
-                if(n / tmp == 0){
+                if(n % b == 0){
                     countNbrDivisibleByN++;
                 }
                 
