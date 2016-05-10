@@ -17,11 +17,13 @@ public class Solution {
             int countSqInt = 0;
             
             for (int i = A; i <= B; i++){
-                for (int j = A; j <=B; j++){
-                    if (i*i == j){
+                
+                
+           
+                    if ( i % (Math.sqrt(i)) ==0 ){
                         countSqInt++;
                     }
-                }
+                
             }
             
             System.out.println(countSqInt);
