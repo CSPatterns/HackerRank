@@ -26,7 +26,7 @@ public class Solution {
                      
                              countSqInt++;
                         
-                            double newSq =  (i + (Math.sqrt(i)) * 2) + 1;
+                            double newSq =  (i + (Math.sqrt(i)) * 2);
                             i = (int) newSq;
                         
                     }
