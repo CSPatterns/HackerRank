@@ -15,13 +15,19 @@ public class Solution {
             int A = in.nextInt();
             int B = in.nextInt();
             int countSqInt = 0;
+            int potentialSq = 1;
             
-            for (int i = A; i <= B; i++){
+            for (int i = 1; i <= B; i++){
                 
                 
-           
-                    if ( i % (Math.sqrt(i)) ==0 ){
-                        countSqInt++;
+                    potentialSq = (potentialSq + (i * 2) ) + 1;
+                
+                    if ( potentialSq % (Math.sqrt(potentialSq)) ==0 ) {
+                        
+                        if(( potentialSq >=A ) &&  (potentialSq <= B)){
+                             countSqInt++;
+                        }
+                       
                     }
                 
             }
