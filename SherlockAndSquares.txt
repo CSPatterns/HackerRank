@@ -15,24 +15,26 @@ public class Solution {
             int A = in.nextInt();
             int B = in.nextInt();
             int countSqInt = 0;
-            int potentialSq = 1;
+            double potentialSq = 1;
             
-            for (int i = 1; i <= B; i++){
+            for (int i = A; i <= B; i++){
                 
-                
-                    potentialSq = (potentialSq + (i * 2) ) + 1;
+                   
+                    potentialSq = (potentialSq + ((Math.sqrt(potentialSq))* 2) ) + 1;
                 
                     if ( potentialSq % (Math.sqrt(potentialSq)) ==0 ) {
                         
-                        if(( potentialSq >=A ) &&  (potentialSq <= B)){
+                     
                              countSqInt++;
-                        }
-                       
+                        
+                             i =  (int) potentialSq;
                     }
                 
             }
             
             System.out.println(countSqInt);
+            potentialSq = 1;
+            countSqInt = 0;
         }
     }
 }
