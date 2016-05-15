@@ -16,18 +16,18 @@ public class Solution {
             arr[arr_i] = in.nextInt();
             
 	        if(arr_i == n-1){
-
-               while(arr.length == 0){
+                 count = arr.length; 
+               while(count != 0){
                    
-                    Arrays.sort(arr);
+                Arrays.sort(arr);
 		       //arr.sort
 		       int sm = arr[0];
 		       for(int j=0; j< n; j++)
 			      if(arr[j]/sm ==0){
-				   arr.length--;
+				   count--;
 			    }    
 
-		     System.out.println(arr.length);         
+		     System.out.println(count);         
 
 	       }
 
