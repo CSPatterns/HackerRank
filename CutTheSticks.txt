@@ -26,17 +26,27 @@ public class Solution {
             //{
                 //intList.add(arr[index]);
        // }
-        
+         Collections.sort(intList);
+        System.out.println(intList.size());
+        intList.remove(0);
+        System.out.println(intList.size());
        for(int j = 0; j< intList.size(); j++){
-           Collections.sort(intList);
+          
            int smallest = intList.get(0);
+           // System.out.println(smallest);
+           System.out.println("----");
+            System.out.println(intList.get(j));
+            
            
-           if(intList.get(j)/smallest == 0){
+           if(intList.get(j)/(smallest) == 0){
                intList.remove(j);
+              
            }
            //need to be outside ot for loop
-           System.out.println(intList.size());
+           //System.out.println(intList.size());
        }
+        
+        System.out.println(intList.size());
         
     }
 }
