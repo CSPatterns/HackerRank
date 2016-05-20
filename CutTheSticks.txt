@@ -10,21 +10,32 @@ public class Solution {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int arr[] = new int[n];
+        List<Integer> intList = new ArrayList<Integer>();
+        
         for(int arr_i=0; arr_i < n; arr_i++){
             arr[arr_i] = in.nextInt();
+            
+            intList.add(arr[arr_i]);
         }
         
-       int count = arr.length;
+        // List<Integer> list = Arrays.asList(arr);
+        //int count = list.size();
         
-       for(int j = 0; j< count; j++){
-           Arrays.sort(arr);
-           int smallest = arr[0];
+        //List<Integer> intList = new ArrayList<Integer>();
+        //for (int index = 0; index < arr.length; index++)
+            //{
+                //intList.add(arr[index]);
+       // }
+        
+       for(int j = 0; j< intList.size(); j++){
+           Collections.sort(intList);
+           int smallest = intList.get(0);
            
-           if(arr[j]/smallest == 0){
-               count--;
+           if(intList.get(j)/smallest == 0){
+               intList.remove(j);
            }
            //need to be outside ot for loop
-           System.out.println(count);
+           System.out.println(intList.size());
        }
         
     }
