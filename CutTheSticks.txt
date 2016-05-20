@@ -7,46 +7,60 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
+       // Scanner in = new Scanner(System.in);
+        int n = 6; //in.nextInt();
         int arr[] = new int[n];
         List<Integer> intList = new ArrayList<Integer>();
         
         for(int arr_i=0; arr_i < n; arr_i++){
-            arr[arr_i] = in.nextInt();
+    
+            
+            Scanner user_input = new Scanner(System.in);
+			System.out.println("type a number: ");
+			
+			
+			 arr[arr_i] = user_input.nextInt();
             
             intList.add(arr[arr_i]);
         }
         
-        // List<Integer> list = Arrays.asList(arr);
-        //int count = list.size();
+     
         
-        //List<Integer> intList = new ArrayList<Integer>();
-        //for (int index = 0; index < arr.length; index++)
-            //{
-                //intList.add(arr[index]);
-       // }
-         Collections.sort(intList);
         System.out.println(intList.size());
-        intList.remove(0);
-        System.out.println(intList.size());
+        //intList.remove(0);
+       // System.out.println("size after remove" +  intList.size());
        for(int j = 0; j< intList.size(); j++){
-          
+    	   Collections.sort(intList);
            int smallest = intList.get(0);
            // System.out.println(smallest);
-           System.out.println("----");
-            System.out.println(intList.get(j));
-            
+          // System.out.println("get j----");
+           // System.out.println(intList.get(j));
+            int flag = 0;
+            L2:
+            for (int k = 0; k < intList.size(); k++){
+            	
+//            	if(flag == 1){
+//            		k = 0;
+//            	}
+            	
+            	  while(intList.get(k) - (smallest) == 0){
+                      intList.remove(k);
+                      if(intList.size() == 1){
+                    	  System.out.println(intList.size());
+                  		break L2;
+                  	}
+                  }
+            	
+            }
+            	
+          //  System.out.println((intList.get(j)));
+         
            
-           if(intList.get(j)/(smallest) == 0){
-               intList.remove(j);
-              
-           }
-           //need to be outside ot for loop
-           //System.out.println(intList.size());
+           System.out.println(intList.size());
+          
        }
         
-        System.out.println(intList.size());
+       
         
     }
 }
